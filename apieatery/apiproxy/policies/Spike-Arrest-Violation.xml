@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Spike-Arrest-Violation">
+    <DisplayName>Spike Arrest Violation</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+      <Headers/>
+      <Payload contentType="text/plain">\{"error":"Spike Arrest Voilation. Please ensure you are within the spike arrest voilation limits."} </Payload>
+      <StatusCode>401</StatusCode>
+      <ReasonPhrase>Unauthorized</ReasonPhrase>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

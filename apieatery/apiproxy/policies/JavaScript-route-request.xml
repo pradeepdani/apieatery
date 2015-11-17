@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="false" timeLimit="200" name="JavaScript-route-request">
+    <DisplayName>JavaScript route request</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://JavaScript-route-request.js</ResourceURL>
+</Javascript>
