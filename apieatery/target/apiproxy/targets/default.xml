@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Lookup-Cache</Name>
+            </Step>
+            <Step>
+                <Condition>lookupcache.Lookup-Cache.cachehit = true</Condition>
+                <Name>Deserialize-credentials</Name>
+            </Step>
+            <Step>
+                <Condition>lookupcache.Lookup-Cache.cachehit = false</Condition>
+                <Name>KVM-Get-Credentials</Name>
+            </Step>
+            <Step>
+                <Condition>((lookupcache.Lookup-Cache.cachehit = false) AND ((username == null) OR (username == "") OR (password == null) OR (password == "")))</Condition>
+                <Name>Raise-Fault-Credentials-Not-Setup</Name>
+            </Step>
+            <Step>
+                <Condition>lookupcache.Lookup-Cache.cachehit = false</Condition>
+                <Name>Convert-Credentials-to-JSON</Name>
+            </Step>
+            <Step>
+                <Condition>lookupcache.Lookup-Cache.cachehit = false</Condition>
+                <Name>Populate-Credentials</Name>
+            </Step>
+            <Step>
+                <Name>Basic-Authentication</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPTargetConnection>
+        <URL>https://apigee-edu-test.apigee.net/v1/apieatery</URL>
+    </HTTPTargetConnection>
+</TargetEndpoint>

@@ -31,6 +31,15 @@
     <name>apieatery</name>
     <packaging>pom</packaging>
 
+    <distributionManagement>
+    <!-- use the following if you're not using a snapshot version. -->
+       <repository>
+          <id>localSnap</id>
+          <name>RepositoryProxyRel</name>
+          <url>scp://repo/maven2</url>
+       </repository>
+    </distributionManagement>
+
     <profiles>
         <profile>
             <id>test</id>

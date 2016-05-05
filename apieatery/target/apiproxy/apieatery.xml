@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="13" name="apieatery">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1439491338809</CreatedAt>
+    <CreatedBy>pdani@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>apieatery</DisplayName>
+    <LastModifiedAt>1444238044067</LastModifiedAt>
+    <LastModifiedBy>pdani@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Assign-Mashup-Response</Policy>
+        <Policy>AuthenticateToken</Policy>
+        <Policy>Basic-Authentication-Decode</Policy>
+        <Policy>Basic-Authentication</Policy>
+        <Policy>Convert-Credentials-to-JSON</Policy>
+        <Policy>Deserialize-credentials</Policy>
+        <Policy>Extract-truck-name</Policy>
+        <Policy>GererateToken</Policy>
+        <Policy>JavaScript-Clean-Response</Policy>
+        <Policy>JavaScript-route-request</Policy>
+        <Policy>KVM-Get-Credentials</Policy>
+        <Policy>Lookup-Cache</Policy>
+        <Policy>Populate-Credentials</Policy>
+        <Policy>Raise-Fault-Credentials-Not-Setup</Policy>
+        <Policy>Response-Cache</Policy>
+        <Policy>Service-Callout-Baas-Rating</Policy>
+        <Policy>Spike-Arrest-Violation</Policy>
+        <Policy>Spike-Arrest</Policy>
+        <Policy>Stat-Report-Truck-Name</Policy>
+        <Policy>Verify-API-Key</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://Convert-Credentials-to-JSON.js</Resource>
+        <Resource>jsc://Deserialize-credentials.js</Resource>
+        <Resource>jsc://JavaScript-Clean-Response.js</Resource>
+        <Resource>jsc://JavaScript-route-request.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>baasTarget</TargetEndpoint>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

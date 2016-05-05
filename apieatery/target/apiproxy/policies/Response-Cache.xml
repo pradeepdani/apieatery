@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ResponseCache async="false" continueOnError="false" enabled="true" name="Response-Cache">
+    <DisplayName>Response Cache</DisplayName>
+    <Properties/>
+  <Scope>Exclusive</Scope>
+    <CacheKey>
+        <Prefix>chefs</Prefix>
+        <KeyFragment ref="proxy.pathsuffix" type="string"/>
+    </CacheKey>
+    <ExpirySettings>
+        <TimeoutInSec>30</TimeoutInSec>
+    </ExpirySettings>
+</ResponseCache>

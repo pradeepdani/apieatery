@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="Lookup-Cache">
+    <DisplayName>Lookup Cache</DisplayName>
+    <Properties/>
+    <CacheKey>
+      <KeyFragment>TargetCredentials</KeyFragment>
+    </CacheKey>
+    <CacheResource/>
+    <CacheResource>bootcamp-cridentials</CacheResource>
+    <AssignTo>credentials.json</AssignTo>
+</LookupCache>
